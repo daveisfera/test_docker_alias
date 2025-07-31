@@ -1,0 +1,14 @@
+services:
+  test_docker_alias:
+    container_name: test_docker_alias
+    image: test_docker_alias:local
+    ports:
+      - 8000:8000
+    networks:
+      default:
+        aliases:
+          - local.testme.com
+
+networks:
+  default:
+    driver: bridge
