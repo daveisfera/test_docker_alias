@@ -23,8 +23,6 @@ jobs:
           context: .
           tags: test_docker_alias:local
           push: false
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
 
       - name: Start
         run: ./start.sh
